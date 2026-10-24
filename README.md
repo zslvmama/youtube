@@ -18,8 +18,6 @@
 - 「全部 / 媽媽 / 旅遊」切換只看一個頻道。
 - 網址參數可直接指到過濾好的畫面：`?ch=mama|travel`、`?q=<關鍵字>`，例 <https://zslvmama.github.io/youtube/?ch=travel&q=金門>。頁面會把目前的過濾狀態寫回網址，複製即可分享。
 
-舊的旅遊索引頁 <https://zslvmama.github.io/travel/> 自動轉到這裡。
-
 ## 更新方式
 
 頁面從本機 build script 產生，兩個頻道的 TSV 一起讀：
