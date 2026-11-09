@@ -1982,37 +1982,43 @@ footer a{color:#9ab}
 <tr data-ch="mama" data-v="p529uacVzK0" data-s="20150223t1743 20150223.1743-46_草坪頭"><td class="thumb"><a href="https://youtu.be/p529uacVzK0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/p529uacVzK0/mqdefault.jpg" loading="lazy" alt=""></a></td><td><div class="date">2015-02-23 17:43</div><a href="https://youtu.be/p529uacVzK0" target="_blank" rel="noopener" class="title">20150223.1743-46_草坪頭</a><div class="meta"><span class="ch c-mama">媽媽</span> <span class="kind kV">V</span> · <span class=dur>0:09</span></div></td></tr>
 </tbody></table>
 <div id="pv"><div id="pbar"><div id="pt"></div><button id="pp">上一支</button><button id="pn">下一支</button><button id="pf">全螢幕</button><button id="px">關閉</button></div><div id="pw"><div id="pc" title="點一下開始播放影片"><div id="pcs"></div></div><div id="pl"></div></div></div>
-<footer>2026-11-09 08:28 產出 · 共 1923 支影片 · 時序由標題前綴 date_token 決定<br><a href="https://www.youtube.com/@zslvmama" target="_blank" rel="noopener">@zslvmama</a>（媽媽 1681 支） · <a href="https://www.youtube.com/@zslvtravel" target="_blank" rel="noopener">@zslvtravel</a>（旅遊 242 支）</footer>
+<footer>2026-11-09 09:56 產出 · 共 1923 支影片 · 時序由標題前綴 date_token 決定<br><a href="https://www.youtube.com/@zslvmama" target="_blank" rel="noopener">@zslvmama</a>（媽媽 1681 支） · <a href="https://www.youtube.com/@zslvtravel" target="_blank" rel="noopener">@zslvtravel</a>（旅遊 242 支）</footer>
 <script>
 const f=document.getElementById('f'),rs=document.querySelectorAll('#r tr'),c=document.getElementById('c'),bs=document.querySelectorAll('#ch button');
 let ch='';
 function u(){const ws=f.value.toLowerCase().split(/\s+/).filter(Boolean);let n=0;rs.forEach(r=>{const s=(!ch||r.dataset.ch===ch)&&ws.every(w=>r.dataset.s.includes(w));r.style.display=s?'':'none';if(s)n++;});c.textContent=`${n} / ${rs.length} 支`;
-const p=new URLSearchParams();if(ch)p.set('ch',ch);if(f.value)p.set('q',f.value);history.replaceState(null,'',location.pathname+(p.toString()?'?'+p:''));}
+const p=new URLSearchParams();if(ch)p.set('ch',ch);if(f.value)p.set('q',f.value);if(s0)p.set('say',s0);history.replaceState(null,'',location.pathname+(p.toString()?'?'+p:''));}
 function setCh(v){ch=v;bs.forEach(b=>b.classList.toggle('on',b.dataset.ch===v));u();}
 bs.forEach(b=>b.addEventListener('click',()=>setCh(b.dataset.ch)));
 const p0=new URLSearchParams(location.search);const q0=p0.get('q');if(q0)f.value=q0;
+// 給媽媽的節目：網址 ?say=金門,美濃（說/ 檔名的一部分，逗號分隔，照這個順序播）。沒有 say 就是純輪播，不顯示任何說的話
+const SAY=[{"n": "20260809_屏東水族", "t": "媽媽，八月初我跟姐姐去「屏東農科水族」玩，你之前也去過的。\n我用筆電放了幾段影片給你看，也告訴你怎麼找到更多。", "ids": [], "ch": "travel", "q": "屏東農科水族"}, {"n": "20260906_嘉義公園的樹", "t": "媽媽，昨天我跟二姐、三姐全家，我們去「嘉義公園」，你去過的，\n照片的樹長得漂亮，給你也看看。", "ids": ["xGL7PVU5Btk"]}, {"n": "20260906_移栽的芒果樹", "t": "媽，你看，那株移栽的芒果樹，如今都快兩層樓高了。", "ids": ["tb-9LoRU9wQ"]}, {"n": "20260912_社區烤肉", "t": "媽媽，那天是農曆八月初二，社區發展協會提前慶祝中秋節，\n眾人一同烤肉，很歡慶，很有趣，媽媽你也看看哦。", "ids": ["FI1nKVoM0lU"]}, {"n": "20260914_金星合月", "t": "媽媽，那天傍晚天上金星合月，很漂亮，給你也看看。", "ids": ["sx9pjSRBLyY"]}, {"n": "20260914_金門", "t": "媽媽，九月中大姐、二姐、三姐三個人去金門自由行，玩了四天，\n飛機和住宿都是楷茜安排的。\n她們看了水頭和山后的古厝，進了翟山坑道，上莒光樓看金門大橋，\n也過橋到小金門，退潮的時候走石板道上建功嶼，泥灘上都是小螃蟹。\n我用筆電把這趟的影片全部輪播給你看。", "ids": [], "ch": "travel", "q": "金門"}, {"n": "20260926_中秋聚餐放煙火", "t": "媽媽，中秋節那天我們聚餐，楷茜的女兒、嘉榮、育芳，還有楷峰、楷茜、大姐、二姐、三姐，\n晚上在三姐家庭院放煙火，很熱鬧，給你也看看。", "ids": ["mjhyvOI73VI", "A0WFLNNtwoU", "k_Q56dtSUmQ", "P7cKAfAXh3s"]}, {"n": "20261003_水明殿排演宋江陣", "t": "媽媽，那天晚上家附近的水明殿有人在排演宋江陣，\n很熱鬧，給你也看看。", "ids": ["0FFHydIm-xs"]}],sy=(p0.get('say')||'').split(',').map(k=>k.trim()).filter(Boolean).map(k=>SAY.find(s=>s.n.includes(k))).filter(Boolean),s0=sy.length?p0.get('say'):'';
 const c0=p0.get('ch');f.addEventListener('input',u);setCh(c0&&[...bs].some(b=>b.dataset.ch===c0)?c0:'');
-const pv=document.getElementById('pv'),pt=document.getElementById('pt');
-const SAY=[{"t": "媽媽，八月初我跟姐姐去「屏東農科水族」玩，你之前也去過的。\n我用筆電放了幾段影片給你看，也告訴你怎麼找到更多。", "ids": [], "ch": "travel", "q": "屏東農科水族"}, {"t": "媽媽，昨天我跟二姐、三姐全家，我們去「嘉義公園」，你去過的，\n照片的樹長得漂亮，給你也看看。", "ids": ["xGL7PVU5Btk"]}, {"t": "媽，你看，那株移栽的芒果樹，如今都快兩層樓高了。", "ids": ["tb-9LoRU9wQ"]}, {"t": "媽媽，那天是農曆八月初二，社區發展協會提前慶祝中秋節，\n眾人一同烤肉，很歡慶，很有趣，媽媽你也看看哦。", "ids": ["FI1nKVoM0lU"]}, {"t": "媽媽，那天傍晚天上金星合月，很漂亮，給你也看看。", "ids": ["sx9pjSRBLyY"]}, {"t": "媽媽，九月中大姐、二姐、三姐三個人去金門自由行，玩了四天，\n飛機和住宿都是楷茜安排的。\n她們看了水頭和山后的古厝，進了翟山坑道，上莒光樓看金門大橋，\n也過橋到小金門，退潮的時候走石板道上建功嶼，泥灘上都是小螃蟹。\n我用筆電把這趟的影片全部輪播給你看。", "ids": [], "ch": "travel", "q": "金門"}, {"t": "媽媽，中秋節那天我們聚餐，楷茜的女兒、嘉榮、育芳，還有楷峰、楷茜、大姐、二姐、三姐，\n晚上在三姐家庭院放煙火，很熱鬧，給你也看看。", "ids": ["mjhyvOI73VI", "A0WFLNNtwoU", "k_Q56dtSUmQ", "P7cKAfAXh3s"]}, {"t": "媽媽，那天晚上家附近的水明殿有人在排演宋江陣，\n很熱鬧，給你也看看。", "ids": ["0FFHydIm-xs"]}],pc=document.getElementById('pc'),pcs=document.getElementById('pcs');
-let pq=[],pi=0,yp=null,wl=null,lt=0,hold=0,say=null,st=0;
-// 目前列出的影片對應哪一則「跟媽媽說的話」：索引頁連結的 ch 與 q 相同，或列出的影片全在該則的 youtu.be 連結裡
-function match(){const q=f.value.trim().toLowerCase();let s=SAY.find(s=>s.q!==undefined&&s.q===q&&s.ch===ch);
-if(!s)s=SAY.find(s=>s.ids.length&&pq.every(x=>s.ids.includes(x.v)));return s?s.t:null;}
+const pv=document.getElementById('pv'),pt=document.getElementById('pt'),pb=document.getElementById('play');
+const pc=document.getElementById('pc'),pcs=document.getElementById('pcs');
+if(sy.length){pb.textContent='▶ 說給媽媽聽';pb.title='先顯示跟媽媽說的話，再播那一則的影片；一則接一則，全部播完再從頭';}
+// pq 的每一項不是一段話 {c} 就是一支影片 {v,t,h}
+let pq=[],pi=0,yp=null,wl=null,lt=0,hold=0,st=0;
+const item=r=>({v:r.dataset.v,t:r.querySelector('.title').textContent});
+const num=a=>a.map((x,i)=>({...x,h:`${i+1} / ${a.length}　${x.t}`}));
+// 一則話的影片：有索引頁連結就照它的 ch 與 q 撈，否則取它列的 youtu.be；都依拍攝時間由舊到新
+function vids(s){const ws=(s.q||'').split(/\s+/).filter(Boolean);
+return [...rs].filter(r=>s.q!==undefined?(!s.ch||r.dataset.ch===s.ch)&&ws.every(w=>r.dataset.s.includes(w)):s.ids.includes(r.dataset.v)).reverse().map(item);}
 const on=()=>pv.classList.contains('on');
 function lock(){if(navigator.wakeLock)navigator.wakeLock.request('screen').then(l=>{wl=l;}).catch(()=>{});}
-function show(){lt=0;hold=Date.now()+1500;clearTimeout(st);
-if(pi<0){pcs.textContent=say;pc.classList.add('on');pt.textContent='跟媽媽說的話';if(yp&&yp.stopVideo)yp.stopVideo();st=setTimeout(()=>go(1),Math.max(12000,say.length*350));return;}
-pc.classList.remove('on');const x=pq[pi];pt.textContent=`${pi+1} / ${pq.length}　${x.t}`;if(yp&&yp.loadVideoById)yp.loadVideoById(x.v);}
-function go(d){if(!on()||!pq.length)return;const lo=say?-1:0,n=pq.length-lo;pi=lo+(((pi-lo+d)%n)+n)%n;show();}
+function show(){lt=0;hold=Date.now()+1500;clearTimeout(st);const x=pq[pi];
+if(x.c){pcs.textContent=x.c;pc.classList.add('on');pt.textContent='跟媽媽說的話';if(yp&&yp.stopVideo)yp.stopVideo();st=setTimeout(()=>go(1),Math.max(12000,x.c.length*350));return;}
+pc.classList.remove('on');pt.textContent=x.h;if(yp&&yp.loadVideoById)yp.loadVideoById(x.v);}
+function go(d){if(!on()||!pq.length)return;const n=pq.length;pi=(((pi+d)%n)+n)%n;show();}
 function mk(){yp=new YT.Player('pl',{width:'100%',height:'100%',playerVars:{rel:0,playsinline:1},
-events:{onReady:()=>{if(on()&&pi>=0)show();},onStateChange:e=>{if(e.data===0)go(1);},onError:()=>setTimeout(()=>go(1),1500)}});}
+events:{onReady:()=>{if(on()&&!pq[pi].c)show();},onStateChange:e=>{if(e.data===0)go(1);},onError:()=>setTimeout(()=>go(1),1500)}});}
 // Shorts 內嵌時會自己循環、不發 ENDED：輪詢播放位置，到片尾或已繞回開頭就換下一支
 setInterval(()=>{if(!on()||!yp||!yp.getPlayerState||Date.now()<hold||yp.getPlayerState()!==1)return;
 const d=yp.getDuration(),t=yp.getCurrentTime();if(!d)return;
 if(t>=d-0.3||(lt>=d-1.2&&t<1)){go(1);return;}lt=t;},200);
 function full(){if(pv.requestFullscreen)pv.requestFullscreen().catch(()=>{});}
-function start(){pq=[...rs].filter(r=>r.style.display!=='none').reverse().map(r=>({v:r.dataset.v,t:r.querySelector('.title').textContent}));
-if(!pq.length)return;say=match();pi=say?-1:0;pv.classList.add('on');document.body.style.overflow='hidden';full();lock();
+function start(){pq=sy.length?sy.flatMap(s=>[{c:s.t},...num(vids(s))]):num([...rs].filter(r=>r.style.display!=='none').reverse().map(item));
+if(!pq.length)return;pi=0;pv.classList.add('on');document.body.style.overflow='hidden';full();lock();
 if(yp){show();}else{show();if(window.YT&&YT.Player){mk();}else{window.onYouTubeIframeAPIReady=mk;const s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);}}}
 function stop(){clearTimeout(st);pc.classList.remove('on');pv.classList.remove('on');document.body.style.overflow='';if(yp&&yp.stopVideo)yp.stopVideo();if(document.fullscreenElement)document.exitFullscreen();if(wl){wl.release();wl=null;}}
 document.getElementById('play').addEventListener('click',start);
