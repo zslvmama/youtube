@@ -3,7 +3,7 @@
 兩個 YouTube 頻道全部影片的時序索引頁，同一條時間軸：
 
 - [@zslvmama](https://www.youtube.com/@zslvmama)：媽媽在世時的影片，以及她走後我們想給她看的東西
-- [@zslvtravel](https://www.youtube.com/@zslvtravel)：媽媽走後家人的旅遊，照片做成短片一起放
+- [@zslvtravel](https://www.youtube.com/@zslvtravel)：媽媽走後家人的旅遊，照片做成幾秒的影片一起放
 
 🔗 **線上網址**：<https://zslvmama.github.io/youtube/>
 
