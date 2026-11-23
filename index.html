@@ -2072,11 +2072,11 @@ footer a{color:#9ab}
 <tr data-ch="mama" data-v="p529uacVzK0" data-s="20150223t1743 20150223.1743-46_草坪頭"><td class="thumb"><a href="https://youtu.be/p529uacVzK0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/p529uacVzK0/mqdefault.jpg" loading="lazy" alt=""></a></td><td><div class="date">2015-02-23 17:43</div><a href="https://youtu.be/p529uacVzK0" target="_blank" rel="noopener" class="title">20150223.1743-46_草坪頭</a><div class="meta"><span class="ch c-mama">媽媽</span> <span class="kind kV">V</span> · <span class=dur>0:09</span></div></td></tr>
 </tbody></table>
 <div id="pv"><div id="pbar"><div id="pt"></div><button id="pp">上一支</button><button id="pn">下一支</button><button id="pf">全螢幕</button><button id="px">關閉</button></div><div id="pw"><div id="pc" title="點一下開始播放影片"><div id="pcs"></div></div><div id="pl"></div></div></div>
-<footer>2026-11-23 08:10 產出 · 共 2013 支影片 · 時序由標題前綴 date_token 決定<br><a href="https://www.youtube.com/@zslvmama" target="_blank" rel="noopener">@zslvmama</a>（媽媽 1681 支） · <a href="https://www.youtube.com/@zslvtravel" target="_blank" rel="noopener">@zslvtravel</a>（旅遊 332 支）</footer>
+<footer>2026-11-23 08:33 產出 · 共 2013 支影片 · 時序由標題前綴 date_token 決定<br><a href="https://www.youtube.com/@zslvmama" target="_blank" rel="noopener">@zslvmama</a>（媽媽 1681 支） · <a href="https://www.youtube.com/@zslvtravel" target="_blank" rel="noopener">@zslvtravel</a>（旅遊 332 支）</footer>
 <script>
 const f=document.getElementById('f'),rs=document.querySelectorAll('#r tr'),c=document.getElementById('c'),bs=document.querySelectorAll('#ch button');
-let ch='';
-function u(){const ws=f.value.toLowerCase().split(/\s+/).filter(Boolean);let n=0;rs.forEach(r=>{const s=(!ch||r.dataset.ch===ch)&&ws.every(w=>r.dataset.s.includes(w));r.style.display=s?'':'none';if(s)n++;});c.textContent=`${n} / ${rs.length} 支`;
+let ch='',sv=null;
+function u(){const ws=f.value.toLowerCase().split(/\s+/).filter(Boolean);let n=0;rs.forEach(r=>{const s=(!sv||sv.has(r.dataset.v))&&(!ch||r.dataset.ch===ch)&&ws.every(w=>r.dataset.s.includes(w));r.style.display=s?'':'none';if(s)n++;});c.textContent=`${n} / ${rs.length} 支`;
 const p=new URLSearchParams();if(ch)p.set('ch',ch);if(f.value)p.set('q',f.value);if(s0)p.set('say',s0);history.replaceState(null,'',location.pathname+(p.toString()?'?'+p:''));}
 function setCh(v){ch=v;bs.forEach(b=>b.classList.toggle('on',b.dataset.ch===v));u();}
 bs.forEach(b=>b.addEventListener('click',()=>setCh(b.dataset.ch)));
@@ -2094,6 +2094,8 @@ const num=a=>a.map((x,i)=>({...x,h:`${i+1} / ${a.length}　${x.t}`}));
 // 一則話的影片：有索引頁連結就照它的 ch 與 q 撈，否則取它列的 youtu.be；都依拍攝時間由舊到新
 function vids(s){const ws=(s.q||'').split(/\s+/).filter(Boolean);
 return [...rs].filter(r=>s.q!==undefined?(!s.ch||r.dataset.ch===s.ch)&&ws.every(w=>r.dataset.s.includes(w)):s.ids.includes(r.dataset.v)).reverse().map(item);}
+// 有 say 時列表也只列節目裡的影片（搜尋與頻道按鈕在這個範圍內再篩）
+if(sy.length){sv=new Set(sy.flatMap(s=>vids(s).map(x=>x.v)));u();}
 const on=()=>pv.classList.contains('on');
 function lock(){if(navigator.wakeLock)navigator.wakeLock.request('screen').then(l=>{wl=l;}).catch(()=>{});}
 function show(){lt=0;hold=Date.now()+1500;clearTimeout(st);const x=pq[pi];
